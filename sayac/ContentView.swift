@@ -19,9 +19,8 @@ struct ContentView: View {
     
     func cevirici(saniyeDeger: Int)->String{
         let kalanSaniye = saniyeDeger % 60
-        let kalanDakika = saniyeDeger / 60
-        let kalanSaat = kalanDakika / 60
-        //salise = kalanSaniye * 60
+        let kalanDakika = (saniyeDeger / 60) % 60
+        let kalanSaat = saniyeDeger / 3600
         
         return String(format: "%02i:%02i:%02i", kalanSaat,kalanDakika,kalanSaniye)
     }
